@@ -90,7 +90,7 @@
                 display: grid;
                 justify-content: flex-start;
                 align-items: baseline;
-                grid-template-areas: "nombre telefono correo asunto mensaje editar";
+                grid-template-areas: "nombre telefono correo asunto mensaje editar borrar";
                 grid-auto-columns: 1fr;
                     justify-items: flex-start;
             }
@@ -100,6 +100,11 @@
             .asunto{grid-area: asunto}
             .mensaje{grid-area: mensaje}
             .editar{grid-area: editar}
+            .borrar{grid-area: borrar}
+
+            .encabezado{
+                text-transform: uppercase;
+            }
 
         </style>
     </head>
@@ -128,14 +133,15 @@
 
 
                 <div class="container resultados">
-                     <div class="registro">
+                     <div class="registro encabezado">
                             
                                 <h2 class="nombre">NOMBRE</h2>
-                                <span class="telefono"><strong>telefono: </strong></span>
-                                <span class="correo"><strong>correo: </strong></span>
-                                <span class="asunto"><strong>asunto: </strong></span>
-                                <span class="mensaje"><strong>mensaje: </strong></span>
-                                <span class="editar"><strong>EDITAR: </strong></span>                              
+                                <span class="telefono"><strong>telefono</strong></span>
+                                <span class="correo"><strong>correo</strong></span>
+                                <span class="asunto"><strong>asunto</strong></span>
+                                <span class="mensaje"><strong>mensaje</strong></span>
+                                <span class="editar"><strong>EDITAR</strong></span>
+                                <span class="borrar"><strong>bORRAR</strong></span>
                         </div>
                     @foreach ( $items as $resultado )
                         <div class="registro">
@@ -149,6 +155,15 @@
                                     <a href="/editar/{{$resultado->id}}" class="btn btn-app">
                                         <i class="fa fa-edit"></i> Editar
                                     </a>
+                                </span>
+                                <span class="borrar">
+                                    <form id="form-delet{{ $resultado->id }}" class="form-btn-app btn" action="{{ route('form.destroy', $resultado->id) }}" method="POST">
+                                        {{ csrf_field() }}
+                                        <input type="hidden" name="_method" value="DELETE">
+                                        <button type="submit" class="btn btn-app" type="button" name="button" >
+                                            Eliminar
+                                        </button>
+                                    </form>
                                 </span>
                         </div>
                     @endforeach

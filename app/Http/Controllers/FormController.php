@@ -90,7 +90,6 @@ class FormController extends Controller
      */
     public function update(Request $request, Form $form)
     {
-        //$form = Form::find($id);
         $form->nombre = $request->nombre;
         $form->telefono = $request->telefono;
         $form->correo = $request->correo;
