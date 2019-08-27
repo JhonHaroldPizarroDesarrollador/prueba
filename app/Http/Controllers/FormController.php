@@ -116,7 +116,7 @@ class FormController extends Controller
     {
          $form->delete();
   
-        return redirect()->route('products.index')
-                        ->with('success','Product deleted successfully');
+        return redirect()->route('listado')
+                        ->with('success','deleted successfully');
     }
 }
