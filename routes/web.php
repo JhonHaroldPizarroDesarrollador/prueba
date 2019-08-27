@@ -19,8 +19,10 @@ Route::get('home', function () {
     return view('welcome');
 })->name('home');
 
+Route::resource('form','FormController');
+
 Route::get('listado', 'FormController@index');
 
 Route::get('editar/{id}', 'FormController@edit');
 
-//Route::post('update/{id}', 'FormController@update')->name('update');;
+Route::PUT('update', 'FormController@update')->name('update');;

@@ -13,4 +13,8 @@ class Form extends Model
      * @var string
      */
     protected $table = 'form';
+
+    protected $fillable = [
+        'nombre', 'telefono', 'correo', 'asunto', 'mensaje',
+    ];
 }

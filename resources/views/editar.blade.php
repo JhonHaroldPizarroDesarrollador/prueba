@@ -105,7 +105,9 @@
 
                 
                 <div class="container formulario" id="suscribete">
-                    <form action="{{ route('form.update', ['id' => $item->id]) }}" method="put">
+                    <form action="{{ route('form.update',$item->id) }}" method="POST">
+                        @csrf
+                        @method('PUT')
                         <input type="hidden" id="id" name="id" value="{{$item->id}}">
 
                     <p>

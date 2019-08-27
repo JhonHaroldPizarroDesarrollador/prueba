@@ -28,7 +28,7 @@ class FormController extends Controller
      */
     public function create()
     {
-        //
+        return view('welcome');
     }
 
     /**
@@ -88,9 +88,9 @@ class FormController extends Controller
      * @param  \App\Form  $form
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Form $form)
     {
-        $form = Form::find($id);
+        //$form = Form::find($id);
         $form->nombre = $request->nombre;
         $form->telefono = $request->telefono;
         $form->correo = $request->correo;
@@ -115,6 +115,9 @@ class FormController extends Controller
      */
     public function destroy(Form $form)
     {
-        //
+         $form->delete();
+  
+        return redirect()->route('products.index')
+                        ->with('success','Product deleted successfully');
     }
 }
