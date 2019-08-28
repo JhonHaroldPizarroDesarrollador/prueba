@@ -39,19 +39,15 @@ class FormController extends Controller
      */
     public function store(Request $request)
     {
-      $form = new Form;
-      $form->nombre = $request->nombre;
-      $form->telefono = $request->telefono;
-      $form->correo = $request->correo;
-      $form->asunto = $request->asunto;
-      $form->mensaje = $request->mensaje;
-      if( $form->save() )
-      {
-
-        return redirect()->route('home')
-                         ->with('info','form creado');
-      }
-      return back();
+        $request->validate([
+            'nombre' => 'required',
+            'telefono' => 'required',
+            'correo' => 'required',
+            'asunto' => 'required',
+            'mensaje' => 'required',
+        ]);
+        Form::create($request->all());
+        return redirect()->route('home')->with('success','Created successfully.');
     }
 
     /**

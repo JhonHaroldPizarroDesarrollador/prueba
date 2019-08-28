@@ -10,7 +10,10 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
-
+        {{-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> --}}
+        <link rel="stylesheet" type="text/css" href="{{asset('slick/slick.css') }}"/>
+        <!-- Add the slick-theme.css if you want default styling -->
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
 
         <!-- Styles -->
         <style>
@@ -67,7 +70,7 @@
             .container{
                 margin: 0 auto;
                 width: 80%;
-                margin-bottom:40px;
+                margin-bottom:80px;
             }
             .hero{
                 background-image: url(https://via.placeholder.com/1920x1024);
@@ -84,7 +87,27 @@
                 display: inline-grid;
             }
             .item span{
-                margin-top:15px 
+                margin-top:15px;
+                width: 100%;
+                
+            }
+            .slick-prev:before, .slick-next:before {
+                color: gray;
+            }
+            .slick-initialized .slick-slide {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            #suscribete{
+                display: flex;
+            }
+            #suscribete div{
+                min-width: 50%;
+            }
+            footer{
+                height: 150px;
+                background-color: gray
             }
         </style>
     </head>
@@ -102,7 +125,6 @@
             @endif
 
             <div class="content">
-
                 <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>
                     <a href="https://laracasts.com">Laracasts</a>
@@ -119,6 +141,7 @@
 
                 </div>
                 <div class="container productos">
+                    <h2>Productos Destacados</h2>
                     <div class="sliderproductos">
                         <div class="item">
                             <img src="https://via.placeholder.com/220" alt="">
@@ -163,53 +186,107 @@
                     </div>
                 </div>
                 <div class="container clientes">
-                    fgfdg
+                    <h2>Nuestros Clientes</h2>
+                    <div class="sliderClientes">
+                        <div>
+                            <img src="https://via.placeholder.com/50" alt="">
+                        </div>
+                        <div>
+                            <img src="https://via.placeholder.com/50" alt="">
+                        </div>
+                        <div>
+                            <img src="https://via.placeholder.com/50" alt="">
+                        </div>
+                        <div>
+                            <img src="https://via.placeholder.com/50" alt="">
+                        </div>
+                        <div>
+                            <img src="https://via.placeholder.com/50" alt="">
+                        </div>
+                        <div>
+                            <img src="https://via.placeholder.com/50" alt="">
+                        </div>
+                        <div>
+                            <img src="https://via.placeholder.com/50" alt="">
+                        </div>
+                        <div>
+                            <img src="https://via.placeholder.com/50" alt="">
+                        </div>
+                        <div>
+                            <img src="https://via.placeholder.com/50" alt="">
+                        </div>
+                        <div>
+                            <img src="https://via.placeholder.com/50" alt="">
+                        </div>
+                        <div>
+                            <img src="https://via.placeholder.com/50" alt="">
+                        </div>
+                        <div>
+                            <img src="https://via.placeholder.com/50" alt="">
+                        </div>
+                        <div>
+                            <img src="https://via.placeholder.com/50" alt="">
+                        </div>
+                        <div>
+                            <img src="https://via.placeholder.com/50" alt="">
+                        </div>
+                        <div>
+                            <img src="https://via.placeholder.com/50" alt="">
+                        </div>
+                        <div>
+                            <img src="https://via.placeholder.com/50" alt="">
+                        </div>
+                    </div>
                 </div>
                 <div class="container formulario" id="suscribete">
-                    <form action="{{ url('api/form') }}" method="POST">
-                    <p>
+                    <div>
+                        <h2>Subscribete</h2>
+                        <form action="{{ url('api/form') }}" method="POST">
+                        <p>
                         <label>Nombre</label><br>
                         <input type="text" id="nombre" name="nombre">
-                    </p>
-                    <p>
+                        </p>
+                        <p>
                         <label>Phone number</label><br>
                         <input type="text" id="telefono" name="telefono">
-                    </p>  
-                    <p>
+                        </p>
+                        <p>
                         <label>Email</label><br>
                         <input type="email" id="correo" name="correo" required>
-                    </p>
-                    <p>
+                        </p>
+                        <p>
                         <label>asunto</label><br>
                         <input type="text" id="asunto" name="asunto">
-                    </p>
-                    <p>
+                        </p>
+                        <p>
                         <label>Mensaje</label><br>
                         <input type="text" id="mensaje" name="mensaje">
-                    </p>
-                    <p>
+                        </p>
+                        <p>
                         <button>Suscribirse</button>
-                    </p>
-                    </form>
+                        </p>
+                        </form>
+                    </div> 
+                    <div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7725.157354462744!2d-75.69425596998697!3d4.811091445413205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe7c41fe10a32946a!2sPlaza%20Bol%C3%ADvar%2C%20Escultura%20Bol%C3%ADvar%20Desnudo%20Arenas%20Betancourt!5e0!3m2!1ses-419!2sco!4v1566952549785!5m2!1ses-419!2sco" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                    </div>
                 </div>
 
             </div>
+            <footer class="flex-center">
+            <center>
+                <p>Jhon Pizarro</p>
+            </center>
+            </footer>
         </div>
 
 
+
          <!-- jQuery -->
-<script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-
-
-
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 				
-
-         <script src="{{asset('js/custom.js') }}"></script>
+        <script src="{{asset('js/jquery.min.js') }}"></script>
+        <script src="{{asset('slick/slick.min.js') }}"></script>
+        <script src="{{asset('js/custom.js') }}"></script>
 
     </body>
 </html>
