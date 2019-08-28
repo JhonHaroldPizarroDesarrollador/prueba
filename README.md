@@ -15,3 +15,5 @@ la ruta para ver los registros es listado
 la version de laravel es la 5.8
 
 la base de datos se llama landing, usuario root pasword root
+
+no se uso librerias css, es 100% css puro
