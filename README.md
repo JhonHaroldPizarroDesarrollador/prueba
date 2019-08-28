@@ -16,4 +16,4 @@ la version de laravel es la 5.8
 
 la base de datos se llama landing, usuario root pasword root
 
-no se uso librerias css, es 100% css puro
+no se usaronlibrerias css, es 100% css puro
