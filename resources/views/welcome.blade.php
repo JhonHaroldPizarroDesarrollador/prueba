@@ -71,6 +71,11 @@
                 margin: 0 auto;
                 width: 80%;
                 margin-bottom:80px;
+                margin-top:80px;
+                display: inline-block;
+            }
+            .container h2{
+                margin-bottom: 3rem
             }
             .hero{
                 background-image: url(https://via.placeholder.com/1920x1024);
@@ -99,15 +104,34 @@
                 justify-content: center;
                 flex-wrap: wrap;
             }
+            .clientes {
+                text-align: center;
+                background: rgba(0,0,0,0.1)
+            }
             #suscribete{
-                display: flex;
+                display: block;
             }
             #suscribete div{
                 min-width: 50%;
             }
+            #suscribete button {
+                border-radius: 4px;
+                border-width: 1px;
+            }
+            form{
+                margin-bottom: 40px
+            }
             footer{
                 height: 150px;
                 background-color: gray
+            }
+            footer p{
+                color: white
+            }
+            @media (min-width:1024px){
+                #suscribete {
+                    display: flex;
+                }
             }
         </style>
     </head>
@@ -185,59 +209,64 @@
                         </div>
                     </div>
                 </div>
-                <div class="container clientes">
-                    <h2>Nuestros Clientes</h2>
-                    <div class="sliderClientes">
-                        <div>
-                            <img src="https://via.placeholder.com/50" alt="">
-                        </div>
-                        <div>
-                            <img src="https://via.placeholder.com/50" alt="">
-                        </div>
-                        <div>
-                            <img src="https://via.placeholder.com/50" alt="">
-                        </div>
-                        <div>
-                            <img src="https://via.placeholder.com/50" alt="">
-                        </div>
-                        <div>
-                            <img src="https://via.placeholder.com/50" alt="">
-                        </div>
-                        <div>
-                            <img src="https://via.placeholder.com/50" alt="">
-                        </div>
-                        <div>
-                            <img src="https://via.placeholder.com/50" alt="">
-                        </div>
-                        <div>
-                            <img src="https://via.placeholder.com/50" alt="">
-                        </div>
-                        <div>
-                            <img src="https://via.placeholder.com/50" alt="">
-                        </div>
-                        <div>
-                            <img src="https://via.placeholder.com/50" alt="">
-                        </div>
-                        <div>
-                            <img src="https://via.placeholder.com/50" alt="">
-                        </div>
-                        <div>
-                            <img src="https://via.placeholder.com/50" alt="">
-                        </div>
-                        <div>
-                            <img src="https://via.placeholder.com/50" alt="">
-                        </div>
-                        <div>
-                            <img src="https://via.placeholder.com/50" alt="">
-                        </div>
-                        <div>
-                            <img src="https://via.placeholder.com/50" alt="">
-                        </div>
-                        <div>
-                            <img src="https://via.placeholder.com/50" alt="">
+            </div>
+                <div class="clientes">
+                    <div class="container">
+                        <h2>Nuestros Clientes</h2>
+                        <div class="sliderClientes">
+                            <div>
+                                <img src="https://via.placeholder.com/50" alt="">
+                            </div>
+                            <div>
+                                <img src="https://via.placeholder.com/50" alt="">
+                            </div>
+                            <div>
+                                <img src="https://via.placeholder.com/50" alt="">
+                            </div>
+                            <div>
+                                <img src="https://via.placeholder.com/50" alt="">
+                            </div>
+                            <div>
+                                <img src="https://via.placeholder.com/50" alt="">
+                            </div>
+                            <div>
+                                <img src="https://via.placeholder.com/50" alt="">
+                            </div>
+                            <div>
+                                <img src="https://via.placeholder.com/50" alt="">
+                            </div>
+                            <div>
+                                <img src="https://via.placeholder.com/50" alt="">
+                            </div>
+                            <div>
+                                <img src="https://via.placeholder.com/50" alt="">
+                            </div>
+                            <div>
+                                <img src="https://via.placeholder.com/50" alt="">
+                            </div>
+                            <div>
+                                <img src="https://via.placeholder.com/50" alt="">
+                            </div>
+                            <div>
+                                <img src="https://via.placeholder.com/50" alt="">
+                            </div>
+                            <div>
+                                <img src="https://via.placeholder.com/50" alt="">
+                            </div>
+                            <div>
+                                <img src="https://via.placeholder.com/50" alt="">
+                            </div>
+                            <div>
+                                <img src="https://via.placeholder.com/50" alt="">
+                            </div>
+                            <div>
+                                <img src="https://via.placeholder.com/50" alt="">
+                            </div>
                         </div>
                     </div>
+
                 </div>
+            <div class="content">
                 <div class="container formulario" id="suscribete">
                     <div>
                         <h2>Subscribete</h2>
@@ -271,7 +300,6 @@
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7725.157354462744!2d-75.69425596998697!3d4.811091445413205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe7c41fe10a32946a!2sPlaza%20Bol%C3%ADvar%2C%20Escultura%20Bol%C3%ADvar%20Desnudo%20Arenas%20Betancourt!5e0!3m2!1ses-419!2sco!4v1566952549785!5m2!1ses-419!2sco" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                     </div>
                 </div>
-
             </div>
             <footer class="flex-center">
             <center>
