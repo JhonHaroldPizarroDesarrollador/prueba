@@ -1,4 +1,9 @@
 function slider() {
+    $('.sliderHero').slick({
+        autoplay: true,
+        autoplaySpeed: 2000,
+    });
+    
     $('.sliderproductos').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -37,6 +42,10 @@ function slider() {
         dots: true,
         arrows:false
     });
+
+
+
+    
     
 }
 

@@ -85,6 +85,11 @@
                 flex-wrap: wrap;
 
             }
+            .sliderHero {
+                height: 400px;
+                display: flex;
+                align-items: center;
+            }
             .hero h2, .hero .title{
                 width: 100%;
             }
@@ -156,12 +161,30 @@
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>                
-                <div class="m-b-md hero flex-center">
-                    <div class="title m-b-md ">
-                        Landing Page
+                <div class="m-b-md hero">
+                    <div class="sliderHero">
+                        <div>
+                            <div class="title m-b-md ">
+                                Welcome
+                            </div>
+                            <br>
+                            <a href="#suscribete">Suscribete!</a>
+                        </div>
+                        <div>
+                            <div class="title m-b-md ">
+                                Products
+                            </div>
+                            <br>
+                            <a href="#suscribete">Suscribete!</a>
+                        </div>
+                        <div>
+                            <div class="title m-b-md ">
+                                For you
+                            </div>
+                            <br>
+                            <a href="#suscribete">Suscribete!</a>
+                        </div>
                     </div>
-                    <br>
-                    <a href="#suscribete">Suscribete!</a>
 
                 </div>
                 <div class="container productos">
